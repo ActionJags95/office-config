@@ -25,7 +25,8 @@ RUN apt install -y sudo \
   curl \
   wget \
   rsync \
-  sshfs \ unzip \
+  sshfs \
+  unzip \
   zip \
   tar \
   file \
