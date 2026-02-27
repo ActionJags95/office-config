@@ -75,6 +75,9 @@ WORKDIR /home/${USER_NAME}
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 RUN /home/linuxbrew/.linuxbrew/bin/brew bundle --file Brewfile
 
+USER root
+WORKDIR /
+
 RUN apt install tini
 
 
