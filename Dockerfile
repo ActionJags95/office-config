@@ -54,7 +54,8 @@ RUN apt install -y sudo \
   tini \
   command-not-found \
   ca-certificates \
-  git
+  git \
+  fastfetch
 
 
 RUN groupadd -g ${USER_GID} ${USER_NAME}
