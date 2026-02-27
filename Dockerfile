@@ -65,11 +65,15 @@ ENV LC_ALL=en_US.UTF-8
 
 RUN /usr/sbin/useradd -g ${USER_UID} -m -G sudo,${USER_NAME} -s /bin/bash ${USER_NAME}
 RUN echo "${USER_NAME} ALL=(ALL:ALL) NOPASSWD: ALL" > "/etc/sudoers.d/${USER_NAME}"
+RUN chmod 0440 /etc/sudoers.d/${USER_NAME}
 
-COPY ./* /home/${USER_NAME} 
+COPY --chown=${USER_NAME}:${USER_NAME} . /home/${USER_NAME}
+
+USER ${USER_NAME}
+WORKDIR /home/${USER_NAME}
 
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-RUN /home/linuxbrew/.linuxbrew/bin/brew bundle --file /home/${USER_NAME}/Brewfile
+RUN /home/linuxbrew/.linuxbrew/bin/brew bundle --file Brewfile
 
 RUN apt install tini
 
