@@ -35,7 +35,6 @@ return {
         title_pos = "center",
       },
     })
-
     function _lazygit_toggle()
       lazygit:toggle()
     end
@@ -59,6 +58,7 @@ return {
 
     vim.keymap.set("n", "<leader>m", "<cmd>lua _btop_toggle()<CR>",
       { noremap = true, silent = true, desc = "Open System Monitor (btop)" })
+
     require("toggleterm").setup({
       shade_temrinals = false,
       shading_factor = -100,
