@@ -6,7 +6,7 @@ return {
     vim.keymap.set(
       "n",
       "<leader>th",
-      ":ToggleTerm direction=horizontal<CR>",
+      ":ToggleTerm direction=horizontal size=20<CR>",
       { noremap = true, silent = true, desc = "Toggle horizontal terminal" }
     ),
     vim.keymap.set(
