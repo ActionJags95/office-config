@@ -60,7 +60,8 @@ return {
     vim.keymap.set("n", "<leader>m", "<cmd>lua _btop_toggle()<CR>",
       { noremap = true, silent = true, desc = "Open System Monitor (btop)" })
     require("toggleterm").setup({
-      -- shading_factor = -100,
+      shade_temrinals = false,
+      shading_factor = -100,
       float_opts = {
         border = "curved",
         title_pos = "center",
