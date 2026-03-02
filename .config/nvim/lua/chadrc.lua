@@ -68,9 +68,9 @@ M.base46 = {
 
     -- Bufferline theming
     TbFill = { bg = "#181926" },
-    TbBufOff = { bg = "#181926", fg = "#5b6078" },
-    TbBufOffClose = { bg = "#181926", fg = "#5b6058" },
-    TbBufOffModified = { bg = "#181926", fg = "#ed8796" },
+    TbBufOff = { bg = "#1e2030", fg = "#5b6078" },
+    TbBufOffClose = { bg = "#1e2030", fg = "#5b6058" },
+    TbBufOffModified = { bg = "#1e2030", fg = "#ed8796" },
   },
 }
 
