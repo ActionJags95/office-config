@@ -39,7 +39,8 @@ return {
       lazygit:toggle()
     end
 
-    vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+    vim.keymap.set("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>",
+      { noremap = true, silent = true, desc = "Open LazyGit" })
 
     require("toggleterm").setup({
       -- shading_factor = -100,
