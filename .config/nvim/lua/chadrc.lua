@@ -57,10 +57,10 @@ M.base46 = {
     TelescopePromptBorder = { fg = "#494d64", bg = "#1e2030" },
 
     -- Blink.cmp Theming
-    BlinkCmpMenu = { bg = "#1e2030" },
-    BlinkCmpMenuBorder = { fg = "#8aadf4", bg = "#1e2030" },
+    BlinkCmpMenu = { bg = "#24273a" },
+    BlinkCmpMenuBorder = { fg = "#8aadf4", bg = "#24273a" },
     BlinkCmpDoc = { bg = "#24273a" },
-    BlinkCmpDocBorder = { fg = "#8aadf4", bg = "#1e2030" },
+    BlinkCmpDocBorder = { fg = "#8aadf4", bg = "#24273a" },
 
     -- Status line Theming
     StatusLine = { bg = "#1e2030" },
