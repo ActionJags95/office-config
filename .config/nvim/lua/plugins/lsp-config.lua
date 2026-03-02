@@ -39,6 +39,12 @@ return {
       },
     })
 
+    vim.lsp.config.bashls = {
+      cmd = { "/snap/bin/bash-language-server", "start" },
+      filetypes = { "bash", "sh", },
+    }
+    vim.lsp.enable "bashls"
+
     vim.diagnostic.config({
       virtual_text = true,
       update_in_insert = true,
