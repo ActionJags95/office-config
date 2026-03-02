@@ -49,11 +49,12 @@ M.base46 = {
 
     -- Telescope Theming
     TelescopeNormal = { bg = "#181926" },
-    TelescopeBorder = { fg = "#181926", bg = "#181926" },
-    TelescopeResultsTitle = { fg = "#181926", bg = "#181926" },
+    TelescopeResultsTitle = { fg = "#24273a", bg = "#ed8796" },
     TelescopePromptNormal = { bg = "#1e2030" },
     TelescopePromptPrefix = { bg = "#1e2030" },
-    TelescopePromptBorder = { fg = "#1e2030", bg = "#1e2030" },
+
+    TelescopeBorder = { fg = "#494d64", bg = "#181926" },
+    TelescopePromptBorder = { fg = "#494d64", bg = "#1e2030" },
 
     -- Blink.cmp Theming
     BlinkCmpMenu = { bg = "#1e2030" },
