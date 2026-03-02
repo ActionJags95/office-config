@@ -42,6 +42,22 @@ return {
     vim.keymap.set("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>",
       { noremap = true, silent = true, desc = "Open LazyGit" })
 
+    local btop = Terminal:new({
+      cmd = "btop",
+      display_name = " System Monitor ",
+      hidden = false,
+      direction = "float",
+      float_opts = {
+        border = "curved",
+        title_pos = "center",
+      }
+    })
+    function _btop_toggle()
+      btop:toggle()
+    end
+
+    vim.keymap.set("n", "<leader>m", "<cmd>lua _btop_toggle()<CR>",
+      { noremap = true, silent = true, desc = "Open System Monitor (btop)" })
     require("toggleterm").setup({
       -- shading_factor = -100,
       float_opts = {
