@@ -21,6 +21,7 @@ return {
       ":ToggleTerm direction=float<CR>",
       { noremap = true, silent = true, desc = "Toggle float terminal" }
     ),
+    vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]]),
   },
   config = function()
     local Terminal = require("toggleterm.terminal").Terminal
