@@ -36,6 +36,7 @@ crust = "#181926"
 type = "prompt"
 alignment = "left"
 newline = true
+
 # OS config
 [[blocks.segments]]
 type = "os"
@@ -46,6 +47,16 @@ leading_diamond = ""
 trailing_diamond = ""
 template = "{{.Icon }} "
 
+# Environments
+## Docker
+[[blocks.segments]]
+type = "text"
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "p:base"
+background = "p:blue"
+template = "{{if .Env.DOCKER_CONT_NAME}}  {{.Env.DOCKER_CONT_NAME}}{{end}} "
 
 # Directory Structure
 [[blocks.segments]]
@@ -59,7 +70,6 @@ background = "p:mauve"
 folder_separator_icon = "  "
 home_icon = ""
 style = "agnoster_full"
-
 [blocks.segments.properties.mapped_locations]
 "~" = " "
 "~/Downloads" = ""
@@ -128,7 +138,6 @@ leading_diamond = ""
 foreground = "p:base"
 background = "p:green"
 template = " {{ .Full }} "
-##
 
 # User name
 [[blocks.segments]]
@@ -150,7 +159,6 @@ background = "p:blue"
 [blocks.segments.properties]
 time_format = " 15:04"
 
-
 # Command Area  
 [[blocks]]
 type = "prompt"
@@ -167,7 +175,6 @@ foreground_templates = [
 foreground = "green"
 background = ""
 template = ""
-
 
 [transient_prompt]
 background = 'transparent'
