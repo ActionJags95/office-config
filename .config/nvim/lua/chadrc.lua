@@ -59,7 +59,7 @@ M.base46 = {
     -- Blink.cmp Theming
     BlinkCmpMenu = { bg = "#24273a" },
     BlinkCmpMenuBorder = { fg = "#8aadf4", bg = "#24273a" },
-    BlinkCmpDoc = { bg = "#24273a" },
+    BlinkCmpDoc = { bg = "#1e2030" },
     BlinkCmpDocBorder = { fg = "#8aadf4", bg = "#24273a" },
 
     -- Status line Theming
