@@ -17,33 +17,43 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+        "bashls",
         "clangd",
+        "cssls",
         "cmake",
+        "dockerls",
+        "docker_compose_language_service",
+        "emmet_language_server",
+        "gopls",
+        "html",
         "jsonls",
+        "ts_ls",
         "lua_ls",
         "marksman",
+        "prismals",
         "pylsp",
+        "sqlls",
         "taplo",
+        "tailwindcss",
+        "vimls",
         "yamlls",
+        "qmlls",
       },
       automatic_installation = true,
     })
 
     require("mason-tool-installer").setup({
       ensure_installed = {
+        "prettier",
         "stylua",
         "black",
         "isort",
         "pylint",
+        { "eslint_d", version = "13.1.2" },
         "shellcheck",
+        "js-debug-adapter",
       },
     })
-
-    vim.lsp.config.bashls = {
-      cmd = { "/snap/bin/bash-language-server", "start" },
-      filetypes = { "bash", "sh", },
-    }
-    vim.lsp.enable "bashls"
 
     vim.diagnostic.config({
       virtual_text = true,
@@ -61,7 +71,6 @@ return {
     })
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-    vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action,
-      { noremap = true, silent = true, desc = "Show code actions" })
+    vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
   end,
 }

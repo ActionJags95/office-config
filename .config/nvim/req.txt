@@ -1,2 +1,25 @@
-1. Make a workaround for npm and python3.10 without breaking the server
-2. Look for linting and debugging
+1. Indentation support and highlights --done
+2. LSP and autocompletions --done and need some deepdive on blink.cmp and its config
+3. Syntax highlighting --done with treesitter
+4. Debugging --done, borrowed old config, need extensive research on this
+5. Git status --done and need to learn lazygit
+6. Formatting and linting --done, borrowed old config, since it does most of the job
+7. File tree --done
+8. Bufferline and management --done and added keymaps
+9. Auto pairing --done but need reading docs on mini.pairs and choosing between mini.paird and nvim-autopairs
+10. Code commenting and todo comments --done and need some extensive config
+11. Error highlighting
+12. Lua line --done
+13. Telescope --done
+14. Messages and Notifications --need to dive deeper for better messages
+15. ColorScheme --done
+16. Terminal Integration --done
+17. Floating nvim cmd --done with noice
+
+Need to setup neovim options as well
+blur is now managed temporarily managed using bg.nvim. for permanent fix, bufferline.nvim, lualine.nvim, blink.cmp, nvim-notify and Floating cmdline need to configured for desired look and text-highlights as well
+Also swaync and sddm needs to be configured
+git blame color also need to be set for better visibility
+
+
+workspaces section of waybar need to be themed

@@ -3,7 +3,18 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("conform").setup({
-      formatters_by_ft = {},
+      formatters_by_ft = {
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        markdown = { "prettier" },
+        lua = { "stylua" },
+        python = { "black" },
+      },
       format_on_save = {
         lsp_fallback = true,
         async = false,
