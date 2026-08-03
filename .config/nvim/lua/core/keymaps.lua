@@ -1,8 +1,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Disable spacebar key's default behaviour in Normal and Visual mode
-vim.keymap.set({ "n", "v" }, "<Sapce>", "<Nop>", { silent = true })
+-- replaces selected text without losing what you yanked
+vim.keymap.set("x", "p", [["_dP]], { desc = "Paste over selection without losing yanked text" })
+
+-- delete without yanking
+vim.keymap.set({ "n", "v" }, "d", [["_d]], { desc = "Delete without yanking" })
 
 -- For concisness
 local opts = { noremap = true, silent = true }
@@ -45,3 +48,22 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", mergeOpts("Move to right pane"))
 -- Indentation
 vim.keymap.set("v", "<", "<gv", mergeOpts("Indent towards left by tabspace"))
 vim.keymap.set("v", ">", ">gv", mergeOpts("Indent towards right by tabspace"))
+
+-- Keep cursor in center while scrolling
+vim.keymap.set("n", "<C-d>", "<C-d>zz", mergeOpts("Move down in buffer with cursor centered"))
+vim.keymap.set("n", "<C-u>", "<C-u>zz", mergeOpts("Move up in buffer with cursor centered"))
+
+-- Keep cursor in center while going through search results
+vim.keymap.set("n", "n", "nzzzv", mergeOpts("Next search result cursor centered"))
+vim.keymap.set("n", "N", "Nzzzv", mergeOpts("Previous search result cursor centered"))
+
+-- Restart neovim
+vim.keymap.set("n", "<leader>re", ":restart<CR>", mergeOpts("Restart neovim (:restart)"))
+
+-- native undo-tree
+vim.keymap.set("n", "<leader>u", function()
+    vim.cmd.packadd("nvim.undotree")
+    require("undotree").open()
+end, mergeOpts("Toggle builtin Undotree"))
+
+-- :nohl for clearing search highlight, need to check which key to map

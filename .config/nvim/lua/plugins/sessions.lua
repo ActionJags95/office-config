@@ -1,7 +1,7 @@
-return {
-  "rmagatti/auto-session",
-  lazy = false,
-  opts = {
-    auto_restore = false,
-  },
-}
+vim.pack.add({
+	"https://github.com/rmagatti/auto-session",
+})
+
+require("auto-session").setup({
+	auto_restore = false,
+})

@@ -1,16 +1,7 @@
-return {
-  "folke/which-key.nvim",
-  event = "VeryLazy",
-  opts = {
-    preset = "modern",
-  },
-  keys = {
-    {
-      "<leader>?",
-      function()
-        require("which-key").show({ global = true })
-      end,
-      desc = "Buffer Local Keymaps (which-key)",
-    },
-  },
-}
+vim.pack.add({
+	"https://github.com/folke/which-key.nvim",
+})
+
+require("which-key").setup({
+	preset = "modern",
+})
